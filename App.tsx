@@ -1,12 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { EquipmentProvider } from './src/contexts/equipments';
+
+import ITEquipment from './src/pages/ITEquipment';
+import ListITEquipment from './src/pages/ListITEquipment';
+import SearchITEquipment from './src/pages/SearchITEquipment';
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <EquipmentProvider>
+      <ITEquipment />
+      {/* <ListITEquipment/> */}
+      {/* <SearchITEquipment/> */}
+    </EquipmentProvider>
   );
 }
 
