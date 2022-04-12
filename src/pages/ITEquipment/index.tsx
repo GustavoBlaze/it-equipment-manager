@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 
 import { Header, Input, Button } from '../../components';
 import useEquipments from '../../hooks/useEquipments';
@@ -50,7 +50,7 @@ export default function ITEquipment() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header title="Cadastro de Equipamentos de TI" />
 
       <View style={styles.content}>
@@ -115,7 +115,7 @@ export default function ITEquipment() {
           <Button text="Incluir" onPress={handleSubmit} />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
